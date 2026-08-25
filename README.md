@@ -28,7 +28,7 @@ An offline, high-performance desktop utility built with **PySide6** and **Pandas
 
 ```bash
 # Clone the repository
-git clone [https://github.com/YOUR_USERNAME/datacleaner-studio.git](https://github.com/YOUR_USERNAME/datacleaner-studio.git)
+git clone [https://github.com/serhoudjisouhil93-alt/datacleaner-studio.git](https://github.com/serhoudjisouhil93-alt/datacleaner-studio.git)
 
 # Navigate into directory
 cd datacleaner-studio
