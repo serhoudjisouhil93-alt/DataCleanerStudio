@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataCleaner Studio — Fast, Offline Data Preparation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">⚡ DataCleaner <span>Studio</span></div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#preview">Interactive Preview</a>
+                <a href="#download" class="btn-nav">Download App</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-container">
+            <span class="badge">Standalone Desktop Engineering Tool</span>
+            <h1>Clean & Sanitize Dirty Datasets <span>In Seconds</span></h1>
+            <p class="hero-subtext">
+                An offline desktop utility built with PySide6 & Pandas. Automatically format column headers, strip whitespace, handle null values, and export clean datasets without complex scripts or cloud privacy risks.
+            </p>
+            <div class="hero-actions">
+                <a href="DataCleanerStudio.exe" class="btn btn-primary" download id="main-download-btn">
+                    💾 Download for Windows (.exe)
+                </a>
+                <button class="btn btn-secondary" onclick="scrollToPreview()">⚡ See How It Works</button>
+            </div>
+            <div class="download-counter" id="download-tracker">Downloads today: <span id="count-val">142</span></div>
+        </div>
+    </header>
+
+    <section id="features" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Core Capabilities</h2>
+            <div class="search-box">
+                <input type="text" id="feature-search" placeholder="Search features (e.g., CSV, duplicates, headers)...">
+            </div>
+            <div class="grid" id="features-grid">
+                <div class="card" data-tags="snake_case headers columns cleanup">
+                    <div class="card-icon">⚡</div>
+                    <h3>Smart Header Normalization</h3>
+                    <p>Standardizes messy, inconsistent column headers into clean, normalized <code>snake_case</code> format using automated pattern matching.</p>
+                </div>
+                <div class="card" data-tags="csv excel xlsx parquet tsv format conversion">
+                    <div class="card-icon">📂</div>
+                    <h3>Multi-Format Support</h3>
+                    <p>Direct point-and-click ingestion and export for CSV, Excel (.xlsx), Apache Parquet, and TSV formats powered by high-performance Pandas engines.</p>
+                </div>
+                <div class="card" data-tags="duplicates nulls stats stats telemetry rows">
+                    <div class="card-icon">📊</div>
+                    <h3>Real-Time Telemetry</h3>
+                    <p>Live metrics bar tracking total rows, column counts, missing value statistics, and duplicate flags updated instantly on every modification.</p>
+                </div>
+                <div class="card" data-tags="offline local privacy security desktop">
+                    <div class="card-icon">🔒</div>
+                    <h3>100% Private & Offline</h3>
+                    <p>Zero external API connections or network latency. All matrix transformations execute locally on your machine's CPU.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="preview" class="section dark-bg">
+        <div class="section-container">
+            <h2 class="section-title">Interactive Operation Sandbox</h2>
+            <p class="section-subtext">Click the transformation buttons below to see how DataCleaner Studio sanitizes raw data in real time:</p>
+            
+            <div class="interactive-demo">
+                <div class="demo-controls">
+                    <button class="demo-btn" onclick="applyDemoTransform('headers')">Normalize Headers</button>
+                    <button class="demo-btn" onclick="applyDemoTransform('whitespace')">Trim Whitespace</button>
+                    <button class="demo-btn" onclick="applyDemoTransform('duplicates')">Drop Duplicates</button>
+                    <button class="demo-btn reset-btn" onclick="resetDemoData()">Reset Raw Data</button>
+                </div>
+                <div class="table-container">
+                    <table id="demo-table">
+                        <thead>
+                            <tr id="table-head">
+                                <th>First Name  </th>
+                                <th>LAST_NAME</th>
+                                <th> Age </th>
+                                <th> Email Address </th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr><td>  Alex </td><td>Smith</td><td>29</td><td>alex@test.com</td></tr>
+                            <tr><td>  Alex </td><td>Smith</td><td>29</td><td>alex@test.com</td></tr>
+                            <tr><td>Sarah  </td><td>CONNOR</td><td>34</td><td>sarah@domain.org </td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="section download-section">
+        <div class="section-container">
+            <h2>Ready to Accelerate Your Data Workflow?</h2>
+            <p>Get the lightweight standalone executable now. No installation wizard required.</p>
+            <a href="DataCleanerStudio.exe" class="btn btn-primary btn-large" download>
+                🚀 Download DataCleanerStudio.exe
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>DataCleaner Studio — Custom Data Engineering Desktop Software</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
